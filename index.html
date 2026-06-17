@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thomas Bear — Live</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a class="nav__logo" href="#">Thomas Bear</a>
+    <button class="nav__burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#shows">Shows</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content fade-up">
+      <h1 class="hero__title">Thomas Bear</h1>
+      <p class="hero__sub">Live Performances</p>
+      <div class="hero__next-show">
+        <span class="hero__next-label">Next Show</span>
+        <span class="hero__next-info">14 Jun · Paradiso · Amsterdam</span>
+      </div>
+      <div class="hero__actions">
+        <a href="#shows" class="btn btn--filled">See All Shows</a>
+        <a href="#music" class="btn btn--ghost">Listen</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- SHOWS (PRIMARY SECTION) -->
+  <section class="section shows" id="shows">
+    <div class="container">
+
+      <div class="shows__header fade-up">
+        <div>
+          <h2 class="section__title">Upcoming Shows</h2>
+          <p class="section__sub">Live Tour</p>
+        </div>
+      </div>
+
+      <div id="shows-container">
+        <p class="shows__loading">Loading shows…</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PHOTO BREAK -->
+  <div class="photo-break">
+    <img src="photo-running-color.jpg" alt="Artist running on the beach" class="photo-break__img" />
+    <div class="photo-break__overlay"></div>
+  </div>
+
+  <!-- MUSIC (SECONDARY) -->
+  <section class="section music" id="music">
+    <div class="container">
+      <h2 class="section__title fade-up">Music</h2>
+      <p class="section__sub fade-up">Latest Release</p>
+
+      <article class="release release--featured fade-up">
+        <div class="release__art">
+          <div class="release__art-img" style="background: linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);">
+            <span class="release__art-label">Album</span>
+          </div>
+        </div>
+        <div class="release__info">
+          <p class="release__type">Album · 2024</p>
+          <h3 class="release__name">Between the Tides</h3>
+          <p class="release__desc">Ten songs about distance, return, and everything the sea takes with it.</p>
+          <div class="release__links">
+            <a href="#" class="link-pill">Spotify</a>
+            <a href="#" class="link-pill">Apple Music</a>
+            <a href="#" class="link-pill">YouTube</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ABOUT (MINIMAL) -->
+  <section class="about" id="about">
+    <div class="about__image-side">
+      <img src="IMG_0949 2.JPG" alt="Artist at sunset" class="about__img" />
+    </div>
+    <div class="about__text fade-up">
+      <h2 class="section__title">About</h2>
+      <p class="about__body">
+        Born by the coast, shaped by its moods. Drawing from folk, indie, and ambient textures — music that holds salt air and quiet longing in equal measure. Touring Europe and North America through 2025.
+      </p>
+      <a href="#" class="btn btn--outline">Full Bio</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__name">Thomas Bear</p>
+      <ul class="footer__social">
+        <li><a href="#" aria-label="Instagram">IG</a></li>
+        <li><a href="#" aria-label="Spotify">SP</a></li>
+        <li><a href="#" aria-label="YouTube">YT</a></li>
+        <li><a href="#" aria-label="TikTok">TK</a></li>
+      </ul>
+      <p class="footer__copy">&copy; 2025 Thomas Bear. All rights reserved. &nbsp;·&nbsp; <a href="#">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
