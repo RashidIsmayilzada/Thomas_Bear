@@ -521,6 +521,9 @@ ul { list-style: none; }
   color: var(--warm);
   font-size: 0.95rem;
   line-height: 1.9;
+  margin-bottom: 1rem;
+}
+.about__body:last-of-type {
   margin-bottom: 2rem;
 }
 .about__text .btn { align-self: flex-start; }
