@@ -66,6 +66,27 @@ function parseDate(val) {
   return new Date(val);
 }
 
+function updateHeroNextShow(shows) {
+  const heroBlock = document.getElementById('hero-next-show');
+  const heroInfo = document.getElementById('hero-next-info');
+  if (!heroBlock || !heroInfo) return;
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const next = shows.find(s => s.d >= today);
+  if (!next) {
+    heroBlock.hidden = true;
+    return;
+  }
+
+  const day = next.d.getDate();
+  const month = next.d.toLocaleString('en-GB', { month: 'short' });
+  const location = [next.venue, next.city].filter(Boolean).join(' · ');
+  heroInfo.textContent = `${day} ${month} · ${location}`;
+  heroBlock.hidden = false;
+}
+
 async function loadShows() {
   const container = document.getElementById('shows-container');
   try {
@@ -87,6 +108,8 @@ async function loadShows() {
       .map(s => ({ ...s, d: parseDate(s.date) }))
       .filter(s => s.d && !isNaN(s.d))
       .sort((a, b) => a.d - b.d);
+
+    updateHeroNextShow(shows);
 
     if (!shows.length) {
       container.innerHTML = '<p class="shows__empty">No upcoming shows — check back soon.</p>';
